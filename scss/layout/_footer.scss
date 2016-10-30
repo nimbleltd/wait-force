@@ -1,0 +1,182 @@
+
+// footer 
+#footer {
+	padding: 30px 0;
+	color: $white;
+	background: $gray;
+	
+	@include media('>=tablet') {
+		padding: 60px 0 40px;
+	}
+	@include media('>=desktop') {
+		padding: 80px 0 60px;
+	}
+	.nav {
+		padding: 8px 0 20px;
+		font-size: 20px;
+		line-height: 22px;
+		text-align: center;
+		overflow: hidden;
+		
+		@include media('>=tablet') {
+			font-size: 25px;
+			line-height: 30px;
+			text-align: left;
+		}
+		@include media('>=desktop') {
+			font-size: 28px;
+			line-height: 34px;
+		}
+		@include media('>=widescreen') {
+			padding: 8px 0 30px;
+			font-size: 30px;
+			line-height: 36px;
+		}
+		h2 {
+			font-size: 28px;
+			font-weight: 600;
+			line-height: inherit;
+			margin: 0 0 10px;
+			
+			@include media('>=tablet') {
+				font-size: 36px;
+				margin: 0 0 18px;
+			}
+		}
+		.col {
+			
+			@include media('>=phone') {
+				width: 50%;
+				float: left;
+				padding: 0 20px 0 0;
+			}
+			@include media('>=desktop') {
+				padding: 0 30px 0 0;
+			}
+		}
+		ul {
+			@extend %listreset;
+			margin: 0 0 21px;
+			overflow: hidden;
+			font-weight: 300;
+			
+			li {
+				margin: 0 0 5px;
+				
+				@include media('>=tablet') {
+					margin: 0 0 10px;
+				}
+				@include media('>=desktop') {
+					margin: 0 0 15px;
+				}
+				@include media('>=widescreen') {
+					margin: 0 0 18px;
+				}
+			}
+			a {
+				color: $white;
+				
+				&:hover {
+					color: $gray-lighter;
+				}
+			}
+		}
+	}
+	.info {
+		margin: 0 -20px;
+		padding: 15px 20px 0;
+		border-top: 1px solid $white;
+		text-align: center;
+		font-size: 18px;
+		line-height: 24px;
+		
+		@include media('>=tablet') {
+			padding: 35px 20px;
+			font-size: 22px;
+			line-height: 28px;
+		}
+		@include media('>=desktop') {
+			font-size: 24px;
+			line-height: 30px;
+		}
+		p {
+			margin: 0;
+		}
+		a {
+			color: $white;
+			
+			&:hover {
+				color: $gray-lighter;
+			}
+		}
+	}
+}
+.instant-quotes {
+	margin: 0 0 30px;
+	position: relative;
+	
+	@include media('>=desktop') {
+		width: 48.4%;
+		float: left;
+		margin: 0 30px 0 0;
+	}
+	@include media('>=widescreen') {
+		margin: 0 74px 0 0;
+	}
+	img {
+		@include img-full-width;
+	}
+	.heading {
+		max-height: 105px;
+		padding: 15px 0 0;
+		font-size: 40px;
+		line-height: 40px;
+		text-align: right;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 15px;
+		left: 20px;
+		
+		@include media('>=phone') {
+			max-height: 135px;
+			font-size: 50px;
+			line-height: 45px;
+			top: 10px;
+			right: 20px;
+		}
+		@include media('>=tablet') {
+			max-height: 165px;
+			font-size: 60px;
+			line-height: 55px;
+			top: 25px;
+			right: 36px;
+		}
+		@include media('>=desktop') {
+			max-height: 180px;
+			font-size: 70px;
+			line-height: 60px;
+		}
+		@include media('>=widescreen') {
+			max-height: 192px;
+			font-size: 80px;
+			line-height: 64px;
+			left: 50px;
+		}
+	}
+	.btn {
+		font-size: 24px;
+		padding-left: 19px;
+		padding-right: 19px;
+		position: absolute;
+		right: 15px;
+		bottom: 15px;
+		
+		@include media('>=tablet') {
+			font-size: 27px;
+			right: 41px;
+			bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,188 @@
+// custom variables and override bootstrap variables
+
+//== Colors
+
+$black:       #101920;
+$white:       #fff;
+$green-dark:  #86aa33;
+$green:       #abd44c;
+$cyan-dark:   #41989e;
+$cyan:        #64c2c8;
+$red-dark:    #b74f4d;
+$red:         #ff6a67;
+
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   #6e7882;
+$gray-light:             #d8d8d8;
+$gray-lighter:           #e3e5e0;
+
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-success:         $green;
+$brand-info:            $cyan;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          $red;
+
+
+//== Scaffolding
+
+$body-bg:               #fff !default;
+$text-color:            $gray;
+
+$link-color:            $cyan;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: none;
+
+
+//== Typography
+
+$font-family-sans-serif:  'Calibre', Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$base-font-proximanova: 'proximanova', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            30px;
+$font-size-h2:            25px;
+$font-size-h3:            18px;
+$font-size-h4:            16px;
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$line-height-base:        1.3333;
+
+$headings-font-family:    inherit !default;
+$headings-font-weight:    700;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+
+//== Buttons
+
+$btn-font-weight:                bold;
+
+$btn-default-color:              $cyan;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             $gray-lighter;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             $green-dark;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                $cyan-dark;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              $red-dark;
+
+$btn-link-disabled-color:        $gray-light !default;
+
+$btn-border-radius-base:         0;
+$btn-border-radius-large:        0;
+$btn-border-radius-small:        0;
+
+
+//== Forms
+
+$input-bg:                       #fff !default;
+$input-bg-disabled:              $gray-light;
+
+$input-color:                    $black;
+$input-border:                   rgba(110,120,130,0.3);
+
+$input-border-radius:            0;
+$input-border-focus:             $gray;
+$input-color-placeholder:        rgba(16,25,32,0.5);
+$input-height-base:              40px;
+$form-group-margin-bottom:       20px;
+
+
+
+//== Media queries breakpoints
+
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1330px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+
+$grid-columns:              12 !default;
+$grid-gutter-width:         30px !default;
+
+//== Container sizes
+
+// Large screen / wide desktop
+$container-large-desktop:      (1280px + $grid-gutter-width) !default;
+$container-lg:                 $container-large-desktop !default;
+
+
+//== Navbar
+
+// Basics of a navbar
+$navbar-height:                    50px !default;
+$navbar-collapse-max-height:       340px !default;
+
+$navbar-default-color:             $white;
+$navbar-default-bg:                $cyan;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-default-link-color:                $white;
+$navbar-default-link-hover-color:          $gray-lighter;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         $gray-lighter;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           $cyan;
+$navbar-default-toggle-icon-bar-bg:        $white;
+$navbar-default-toggle-border-color:       $white;
+
+
+

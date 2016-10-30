@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ReliaQuote</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/jquery.main.js" defer></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="ReliaQuote"></a>
+			</div>
+			<a href="#" class="nav-opener"><span></span></a>
+			<nav id="nav">
+				<ul class="list-unstyled">
+					<li><a href="life-insurance-101.html">Life Insurance 101</a></li>
+					<li><a href="quotes-form-step1.html">Get a Quote</a></li>
+					<li><a href="resource-center.html">Resource Center</a></li>
+					<li><a href="tel:18009403002">Or call us now 1-800-940-3002</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main">
+			<div class="container">
+				<div class="page-head">
+					<div class="logo">
+						<a href="#"><img src="images/logo-digicert.jpg" alt="image description"></a>
+					</div>
+					<div class="holder">
+						<h1>Instant Term Life Insurance Quotes</h1>
+						<p>Almost done! Please complete and submit the confidential form below. All fields are required for application.</p>
+					</div>
+				</div>
+				<ul class="steps">
+					<li><a href="#">Step 1. Share your information</a></li>
+					<li><a href="#">Step 2. See your rates</a></li>
+					<li class="active"><a href="#">Step 3. Apply for coverage</a></li>
+				</ul>
+				<form action="#" class="quotes-form step3 form-validation">
+					<div class="block">
+						<div class="form-group">
+							<label for="fname">FIRST NAME</label>
+							<input type="text" id="fname" data-required="true" class="form-control">
+							<span class="help-block">Field is required</span>
+						</div>
+						<div class="form-group">
+							<label for="lname">LAST NAME</label>
+							<input type="text" id="lname" data-required="true" class="form-control">
+							<span class="help-block">Field is required</span>
+						</div>
+						<div class="form-group">
+							<label for="email">EMAIL ADDRESS</label>
+							<input type="email" id="email" data-required="true" class="form-control">
+							<span class="help-block">Field is required</span>
+						</div>
+						<div class="form-group">
+							<label for="confirm-email">CONFIRM YOUR EMAIL ADDRESS</label>
+							<input type="email" id="confirm-email" data-required="true" class="form-control">
+							<span class="help-block">Field is required</span>
+						</div>
+						<div class="form-group">
+							<label for="address">STREET ADDRESS</label>
+							<input type="text" id="address" data-required="true" class="form-control">
+							<span class="help-block">Field is required</span>
+						</div>
+						<div class="form-group">
+							<label for="city">CITY</label>
+							<input type="text" id="city" data-required="true" class="form-control">
+							<span class="help-block">Field is required</span>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="state">STATE</label>
+									<input type="text" id="state" data-required="true" class="form-control">
+									<span class="help-block">Field is required</span>
+								</div>
+								<div class="form-group">
+									<label for="zip-code">ZIP CODE</label>
+									<input type="text" id="zip-code" data-required="true" class="form-control">
+									<span class="help-block">Field is required</span>
+								</div>
+								<div class="form-group">
+									<label for="mobile">MOBILE TELEPHONE NUMBER</label>
+									<input type="tel" id="mobile" data-required="true" class="form-control">
+									<span class="help-block">Field is required</span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-8 col-sm-6">
+								<div class="form-group">
+									<label for="office-phone">WORK TELEPHONE NUMBER</label>
+									<input type="tel" id="office-phone" class="form-control">
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-3">
+								<div class="form-group">
+									<label for="extension">EXTENSION</label>
+									<input type="tel" id="extension" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="phone">DAYTIME PHONE NUMBER</label>
+									<input type="tel" id="phone" data-required="true" class="form-control">
+									<span class="help-block">Field is required</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group custom-radio">
+							<p>Are you a US Citizen or permanent resident?</p>
+							<ul class="list-unstyled">
+								<li>
+									<input type="radio" id="citizen-yes" name="citizen">
+									<label for="citizen-yes">Yes</label>
+								</li>
+								<li>
+									<input type="radio" id="citizen-no" name="citizen">
+									<label for="citizen-no">No</label>
+								</li>
+							</ul>
+						</div>
+						<div class="form-group custom-radio">
+							<p>Will this application replace an existing policy?</p>
+							<ul class="list-unstyled">
+								<li>
+									<input type="radio" id="policy-yes" name="policy">
+									<label for="policy-yes">Yes</label>
+								</li>
+								<li>
+									<input type="radio" id="policy-no" name="policy">
+									<label for="policy-no">No</label>
+								</li>
+							</ul>
+						</div>
+						<div class="form-group custom-radio">
+							<p>Do you understand to complete the application process ReliaQuote will contact you by telephone to ask additional questions and schedule your free medial exam?</p>
+							<ul class="list-unstyled">
+								<li>
+									<input type="radio" id="exam-yes" name="exam">
+									<label for="exam-yes">Yes</label>
+								</li>
+								<li>
+									<input type="radio" id="exam-no" name="exam">
+									<label for="exam-no">No</label>
+								</li>
+							</ul>
+						</div>
+						<!-- <button type="submit" class="btn btn-info btn-lg">APPLY NOW</button> -->
+						<a href="success-application-submitted.html" class="btn btn-info btn-lg">APPLY NOW</a>
+						<span class="call-us">Questions? Call us. <a href="tel:18009403002">1-800-940-3002</a></span>
+					</div>
+				</form>
+			</div>
+			<section class="testimonials text-center">
+				<div class="container">
+					<ul class="star-rating">
+						<li><a href="#"><i class="icon-star"></i></a></li>
+						<li><a href="#"><i class="icon-star"></i></a></li>
+						<li><a href="#"><i class="icon-star"></i></a></li>
+						<li><a href="#"><i class="icon-star"></i></a></li>
+						<li><a href="#"><i class="icon-star"></i></a></li>
+					</ul>
+					<blockquote>
+						<q>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</q>
+						<cite><a href="#">RAYLAN GIVENS</a></cite>
+					</blockquote>
+				</div>
+			</section>
+		</main>
+		<footer id="footer">
+			<div class="container">
+				<div class="holder">
+					<div class="instant-quotes">
+						<img src="images/img03.jpg" alt="image description">
+						<strong class="heading">Instant Term Life Quotes</strong>
+						<a href="#" class="btn btn-success">SEE YOUR RATES</a>
+					</div>
+					<div class="nav">
+						<div class="col">
+							<h2>Life insurance</h2>
+							<ul class="list-unstyled">
+								<li><a href="#">Get a term life insurance quote</a></li>
+								<li><a href="#">Life insurance 101</a></li>
+								<li><a href="#">Calculate your insurance need </a></li>
+								<li><a href="#">Assess your current plan </a></li>
+								<li><a href="#">Advanced life insurance</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h2>About ReliaQuote</h2>
+							<ul class="list-unstyled">
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Endorsements</a></li>
+								<li><a href="#">Careers</a></li>
+								<li><a href="#">Terms &amp; Conditions</a></li>
+							</ul>
+							<h2>Contact Us</h2>
+							<ul class="list-unstyled">
+								<li><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#108;&#105;&#097;&#113;&#117;&#111;&#116;&#101;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#064;&#114;&#101;&#108;&#105;&#097;&#113;&#117;&#111;&#116;&#101;&#046;&#099;&#111;&#109;</a></li>
+								<li><a href="tel:18009403002">1-800-940-3002</a></li>
+								<li>1312 Vincent Place McLean, VA 22101</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="info">
+					<p>&copy;2016 <a href="#">ReliaQuote</a> Insurance Services, LLC All rights reserved</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

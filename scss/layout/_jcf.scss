@@ -1,0 +1,149 @@
+/* custom select styles */
+.jcf-select {
+	@include size(100%,40px);
+	display: block;
+	position: relative;
+	background: $white;
+	border: 1px solid $input-border;
+	
+	@include media('>=tablet') {
+		height: 50px;
+	}
+	&.jcf-drop-active {
+		border-color: $input-border-focus;
+		z-index: 99;
+	}
+	select {
+		z-index: 1;
+		left: 0;
+		top: 0;
+	}
+	.jcf-select-text {
+		text-overflow:ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		cursor: default;
+		display: block;
+		font-size: 16px;
+		line-height: 18px;
+		color: $gray;
+		margin: 0 20px 0 12px;
+		padding: 12px 0 8px;
+		
+		@include media('>=tablet') {
+			font-size: 18px;
+			line-height: 20px;
+			margin: 0 30px 0 19px;
+			padding: 17px 0 11px;
+		}
+	}
+	.jcf-select-opener {
+		@include triangle(10px, $gray, down);
+		border-top-width: 8px;
+		position: absolute;
+		text-align: center;
+		right: 8px;
+		top: 50%;
+		margin: -4px 0 0;
+		
+		@include media('>=tablet') {
+			border-width: 10px 6px 0;
+			right: 13px;
+			margin: -5px 0 0;
+		}
+	}
+	.jcf-select-drop {
+		position: absolute;
+		margin-top: 0;
+		z-index: 9999;
+		top: 100%;
+		left: -1px;
+		right: -1px;
+	}
+	.jcf-drop-flipped {
+		bottom: 100%;
+		top: auto;
+	}
+}
+body > .jcf-select-drop {
+	position: absolute;
+	margin: -1px 0 0;
+	z-index: 9999;
+}
+body > .jcf-select-drop.jcf-drop-flipped {
+	margin: 1px 0 0;
+}
+.jcf-select-drop .jcf-select-drop-content {
+	border: 1px solid $black;
+}
+/* multiple select styles */
+.jcf-list-box {
+	overflow: hidden;
+	display: inline-block;
+	border: 1px solid $gray;
+	min-width: 200px;
+	margin: 0 15px;
+}
+/* select options styles */
+.jcf-list {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	background: $white;
+	line-height: 20px;
+	font-size: 18px;
+	width: 100%;
+	
+	.jcf-list-content {
+		vertical-align: top;
+		display: inline-block;
+		overflow: auto;
+		width: 100%;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			overflow: hidden;
+			display: block;
+		}
+	}
+	.jcf-overflow {
+		overflow: auto;
+	}
+	.jcf-option {
+		overflow: hidden;
+		cursor: default;
+		display: block;
+		padding: 6px 9px 4px;
+		color: $gray;
+		height: 1%;
+	}
+	.jcf-disabled {
+		background: $white !important;
+		color: #aaa !important;
+	}
+	.jcf-option-hideme {
+		display: none !important;
+	}
+}
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+	background: $gray;
+	color: $white;
+}
+.jcf-list .jcf-optgroup-caption {
+	white-space: nowrap;
+	font-weight: bold;
+	display: block;
+	padding: 5px 9px;
+	cursor: default;
+	color: $black;
+}
+.jcf-list .jcf-optgroup .jcf-option {
+	padding-left: 30px;
+}
+/* common custom form elements styles */
+.jcf-disabled {background: #ddd !important;}

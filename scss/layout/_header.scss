@@ -1,0 +1,242 @@
+
+// header
+#header {
+	padding: 10px 15px;
+	background: $cyan;
+	position: relative;
+	z-index: 99;
+	@extend %clearfix;
+	
+	@include media('>=tablet') {
+		padding: 25px 15px;
+		
+		.home & {
+			width: 100%;
+			padding: 21px 0 21px 40px;
+			background: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	@include media('>=desktop') {
+		padding: 34px 40px 30px;
+	}
+	&:before {
+		@include pseudo-elements(0);
+		position: fixed;
+		background: rgba(0,0,0,0.5);
+		z-index: 100;
+		transition: all 0.3s ease-in-out;
+		visibility: hidden;
+		opacity: 0;
+		
+		.nav-active & {
+			visibility: visible;
+			opacity: 1;
+		}
+		@include media('>=tablet') {
+			display: none;
+		}
+	}
+	.logo {
+		width: 180px;
+		float: left;
+		margin: 5px 10px 0 0;
+		
+		@include media('>=tablet') {
+			width: 200px;
+			
+			.home & {
+				display: none;
+			}
+		}
+		@include media('>=desktop') {
+			width: 222px;
+			margin: 0 20px 0 0;
+		}
+		img {
+			@include img-full-width;
+		}
+	}
+}
+.nav-opener{
+	@include size(40px);
+	float: right;
+	position:relative;
+	border-radius:3px;
+	
+	@include media('>=tablet') {
+		display: none;
+	}
+	&:before,
+	&:after,
+	span{
+		height:4px;
+		background: $white;
+		border-radius:4px;
+		position:absolute;
+		top:50%;
+		left:15%;
+		right:15%;
+		margin-top:-2px;
+		transition:all 0.2s linear;
+	}
+	&:before,
+	&:after{
+		content:'';
+		top:30%;
+	}
+	&:after {
+		top:70%;
+	}
+	.nav-active & { 
+		span {
+			opacity:0;
+		}
+		&:after,
+		&:before{
+			-ms-transform:rotate(45deg);
+			transform:rotate(45deg);
+			top:50%;
+			left:15%;
+			right:15%;
+		}
+		&:after{
+			-ms-transform:rotate(-45deg);
+			transform:rotate(-45deg);
+		}
+	}
+	&:hover{
+		opacity:.9;
+	}
+}
+#nav {
+	width: 250px;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 600;
+	color: $white;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	bottom: 0;
+	overflow-y: auto;
+	background: $cyan;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	transition: all 0.3s ease-in-out;
+	z-index: 999;
+	
+	@include media('>=tablet') {
+		width: auto;
+		font-size: 15px;
+		font-weight: normal;
+		overflow: hidden;
+		text-align: right;
+		position: static;
+		background: none;
+		box-shadow: none;
+	}
+	@include media('>=desktop') {
+		font-size: 18px;
+	}
+	.nav-active & {
+		left: 0;
+	}
+	> ul {
+		padding: 20px 10px;
+		margin: 0;
+		
+		@include media('>=tablet') {
+			padding: 11px 0 0;
+			letter-spacing: -0.32em;
+			
+			.home & {
+				color: $cyan;
+				@include inline(top);
+				background: rgba(255,255,255,0.8);
+				padding: 10px 30px 3px 15px;
+				white-space: nowrap;
+			}
+		}
+		@include media('>=desktop') {
+			.home & {
+				padding: 12px 46px 6px 20px;
+			}
+		}
+		> li {
+			margin: 0 0 2px;
+			
+			@include media('>=tablet') {
+				@include inline(top);
+				letter-spacing: normal;
+				margin: 0;
+				
+				+ li:before {
+					content:"|";
+					padding: 0 8px;
+					
+					.home & {
+						color: $gray;
+					}
+				}
+			}
+			@include media('>=desktop') {
+				+ li:before {
+					padding: 0 12px;
+				}
+			}
+			> a {
+				display: block;
+				color: $white;
+				padding: 12px 15px 8px;
+				border-radius: 5px;
+				
+				&:hover {
+					color: $cyan;
+					background: $white;
+				}
+				@include media('>=tablet') {
+					padding: 0;
+					display: inline;
+					
+					&:hover {
+						color: $gray-lighter;
+						background: none;
+					}
+					.home & {
+						color: $cyan;
+						
+						&:hover {
+							color: $cyan-dark;
+						}
+					}
+				}
+			}
+			&.active > a {
+				color: $cyan;
+				background: $white;
+
+				@include media('>=tablet') {
+					color: $gray-lighter;
+					background: none;
+					
+					.home & {
+						color: $cyan-dark;
+					}
+				}
+			}
+			&.tel a {
+				.home & {
+					@include media('>=tablet') {
+						color: $gray;
+						
+						&:hover {
+							color: $cyan;
+						}
+					}
+				}
+			}
+		}
+	}
+}
